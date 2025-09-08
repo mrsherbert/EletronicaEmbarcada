@@ -1,0 +1,200 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/debug/main.o
+resetVec CODE 0 7C1 7C1 3F 2 1
+udata_shr COMMON 1 70 70 3 1 1
+config CONFIG 4 2007 2007 2 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 20-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 20-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 0-7C0 2
+CONST 800-1FFF 2
+ENTRY 0-7C0 2
+ENTRY 800-1FFF 2
+IDLOC 2000-2003 2
+CODE 0-7C0 2
+CODE 800-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+COMMON 73-7F 1
+EEDATA 2100-21FF 2
+STRCODE 0-7C0 2
+STRCODE 800-1FFF 2
+STRING 0-7C0 2
+STRING 800-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/debug/main.o
+7C1 resetVec CODE >26:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7C3 resetVec CODE >27:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7C4 resetVec CODE >30:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7C6 resetVec CODE >31:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7C7 resetVec CODE >32:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7C8 resetVec CODE >33:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7CA resetVec CODE >34:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7CB resetVec CODE >35:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7CC resetVec CODE >36:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7CD resetVec CODE >37:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7CF resetVec CODE >38:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7D0 resetVec CODE >39:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7D2 resetVec CODE >40:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7D3 resetVec CODE >41:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7D4 resetVec CODE >42:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7D6 resetVec CODE >43:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7D7 resetVec CODE >44:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7D8 resetVec CODE >45:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7DA resetVec CODE >46:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7DB resetVec CODE >47:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7DD resetVec CODE >48:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7DE resetVec CODE >49:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7DF resetVec CODE >50:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7E0 resetVec CODE >51:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7E1 resetVec CODE >52:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7E2 resetVec CODE >53:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7E3 resetVec CODE >54:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7E4 resetVec CODE >56:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7E5 resetVec CODE >57:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7E6 resetVec CODE >58:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7E7 resetVec CODE >59:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7E8 resetVec CODE >60:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7E9 resetVec CODE >61:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7EA resetVec CODE >62:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7EB resetVec CODE >63:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7EC resetVec CODE >64:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7ED resetVec CODE >66:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7EE resetVec CODE >67:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7EF resetVec CODE >68:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7F0 resetVec CODE >69:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7F1 resetVec CODE >70:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7F2 resetVec CODE >71:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7F3 resetVec CODE >72:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7F4 resetVec CODE >74:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7F5 resetVec CODE >75:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7F6 resetVec CODE >76:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7F7 resetVec CODE >78:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7F8 resetVec CODE >80:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7F9 resetVec CODE >81:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7FA resetVec CODE >82:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7FB resetVec CODE >83:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7FC resetVec CODE >84:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7FD resetVec CODE >85:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7FE resetVec CODE >86:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+7FF resetVec CODE >87:C:\Users\Herbert T\MPLABXProjects\190014300TP4.X\main.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 800 0 ABS 0 - -
+__Hspace_1 73 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 4010 0 ABS 0 - -
+__Hudata_bank0 0 0 ABS 0 udata_bank0 -
+__Hudata_bank1 0 0 ABS 0 udata_bank1 -
+__Hudata_bank2 0 0 ABS 0 udata_bank2 -
+__Hudata_bank3 0 0 ABS 0 udata_bank3 -
+led 70 0 COMMON 1 udata_shr build/default/debug/main.o
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+count 71 0 COMMON 1 udata_shr build/default/debug/main.o
+__LresetVec 0 0 ABS 0 resetVec -
+__HresetVec 0 0 ABS 0 resetVec -
+__Hedata 0 0 ABS 0 edata -
+__Hudata 0 0 ABS 0 udata -
+__Hconfig 4012 0 CONFIG 4 config -
+__Ledata 0 0 ABS 0 edata -
+__Ludata 0 0 ABS 0 udata -
+__Hcode 0 0 ABS 0 code -
+__Hdata 0 0 ABS 0 data -
+__Lcode 0 0 ABS 0 code -
+__Ldata 0 0 ABS 0 data -
+__S0 800 0 ABS 0 - -
+__S1 73 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Lconfig 0 0 CONFIG 4 config -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__Ludata_bank0 0 0 ABS 0 udata_bank0 -
+__Ludata_bank1 0 0 ABS 0 udata_bank1 -
+__Ludata_bank2 0 0 ABS 0 udata_bank2 -
+__Ludata_bank3 0 0 ABS 0 udata_bank3 -
+__H__absolute__ 0 0 ABS 0 __absolute__ -
+__Hudata_shr 0 0 ABS 0 udata_shr -
+__Ludata_shr 0 0 ABS 0 udata_shr -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+resetVec 0 7C1 F82 3F 2
+udata_shr 1 70 70 3 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

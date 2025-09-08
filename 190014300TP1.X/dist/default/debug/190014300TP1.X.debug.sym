@@ -1,0 +1,62 @@
+__S0 800 0 ABS 0
+__S1 0 0 ABS 0
+__S3 0 0 ABS 0
+__HresetVec 0 0 ABS 0
+__LresetVec 0 0 ABS 0
+__Hcode 0 0 ABS 0
+__Lcode 0 0 ABS 0
+__Hdata 0 0 ABS 0
+__Ldata 0 0 ABS 0
+__Hudata_bank0 0 0 ABS 0
+__Ludata_bank0 0 0 ABS 0
+__Hudata_shr 0 0 ABS 0
+__Ludata_shr 0 0 ABS 0
+__H__absolute__ 0 0 ABS 0
+__L__absolute__ 0 0 ABS 0
+__Hedata 0 0 ABS 0
+__Ledata 0 0 ABS 0
+__Hudata 0 0 ABS 0
+__Ludata 0 0 ABS 0
+__Hudata_bank1 0 0 ABS 0
+__Ludata_bank1 0 0 ABS 0
+__Hspace_0 800 0 ABS 0
+__Lspace_0 0 0 ABS 0
+__Hspace_1 0 0 ABS 0
+__Lspace_1 0 0 ABS 0
+__Hspace_3 0 0 ABS 0
+__Lspace_3 0 0 ABS 0
+__Hudata_bank2 0 0 ABS 0
+__Ludata_bank2 0 0 ABS 0
+__Hudata_bank3 0 0 ABS 0
+__Ludata_bank3 0 0 ABS 0
+%segments
+code FCC FFF CODE FCC 0
+resetVec FC6 FCB CODE FC6 0
+%locals
+build/default/debug/main.o
+main.s
+17 7E6 0 CODE 0
+18 7E8 0 CODE 0
+19 7E9 0 CODE 0
+22 7EA 0 CODE 0
+23 7EC 0 CODE 0
+24 7ED 0 CODE 0
+25 7EE 0 CODE 0
+26 7EF 0 CODE 0
+27 7F0 0 CODE 0
+29 7F1 0 CODE 0
+30 7F3 0 CODE 0
+32 7F4 0 CODE 0
+33 7F5 0 CODE 0
+34 7F6 0 CODE 0
+35 7F7 0 CODE 0
+36 7F8 0 CODE 0
+37 7F9 0 CODE 0
+38 7FA 0 CODE 0
+39 7FB 0 CODE 0
+41 7FC 0 CODE 0
+42 7FD 0 CODE 0
+43 7FE 0 CODE 0
+44 7FF 0 CODE 0
+11 7E3 0 CODE 0
+12 7E5 0 CODE 0

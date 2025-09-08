@@ -1,0 +1,52 @@
+wait 500 ms
+"A"
+0D
+wait 500 ms
+"Wallace"
+0D
+wait 500 ms
+"P"
+0D
+wait 500 ms
+"A"
+0D
+wait 500 ms
+"Bianca andrade"
+0D
+wait 500 ms
+"P"
+0D
+wait 500 ms
+"A"
+0D
+wait 500 ms
+"Bolsonaro"
+0D
+wait 500 ms
+"P"
+0D
+wait 500 ms
+"A"
+0D
+wait 500 ms
+"Lucas galv"
+0D
+wait 500 ms
+"L"
+0D
+wait 500 ms
+"P"
+0D
+wait 500 ms
+"L"
+0D
+wait 500 ms
+"R"
+0D
+wait 500 ms
+"A"
+0D
+wait 500 ms
+"Wall"
+0D
+wait 500 ms
