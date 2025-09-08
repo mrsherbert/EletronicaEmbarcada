@@ -1,0 +1,54 @@
+## SCL Builder Setup File: Do not edit!!
+
+## VERSION: MPLAB X
+## FORMAT:  v2.00.01
+## DEVICE:  PIC16F1827
+
+## PINREGACTIONS
+cyc
+No Repeat
+--
+&
+## ADVPINREGACTIONS
+--
+&
+--
+COND2
+Any
+
+
+
+0
+cyc
+
+--
+&
+## CLOCK
+&
+## STIMULUSFILE
+Rx
+RCREG
+Message
+0
+1
+C:\Users\Herbert T\Downloads\ee.X\ee.X\Estimulos.txt
+Pkt
+Yes
+
+--
+&
+## RESPONSEFILE
+&
+## ASYNCH
+Pin
+RB0
+Pulse High
+200 cyc
+
+-1
+--
+&
+## ADVANCEDSCL
+
+1
+&

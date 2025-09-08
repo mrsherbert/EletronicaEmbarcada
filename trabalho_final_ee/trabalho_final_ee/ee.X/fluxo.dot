@@ -1,0 +1,134 @@
+digraph cflow {
+    node [shape="box"]
+    main [label="void main (void)
+main.c:24"]
+    main -> SYSTEM_Initialize
+    main -> INTERRUPT_GlobalInterruptEnable
+    main -> INTERRUPT_PeripheralInterruptEnable
+    main -> TMR4_SetInterruptHandler
+    main -> ProcessaDados
+    main -> TMR0_SetInterruptHandler
+    main -> inicia_ultrasom
+    main -> TMR1_SetGateInterruptHandler
+    main -> posicao_bola_tubo
+    main -> TMR6_SetInterruptHandler
+    main -> DRMotordePassos
+    main -> CMP1_GetOutputStatus
+    main -> funcao_diminui_num_passos
+    main -> EUSART_is_rx_ready
+    main -> Dados_recebidos
+    SYSTEM_Initialize [label="SYSTEM_Initialize()"]
+    INTERRUPT_GlobalInterruptEnable [label="INTERRUPT_GlobalInterruptEnable()"]
+    INTERRUPT_PeripheralInterruptEnable [label="INTERRUPT_PeripheralInterruptEnable()"]
+    TMR4_SetInterruptHandler [label="TMR4_SetInterruptHandler()"]
+    ProcessaDados [label="void ProcessaDados ()
+funcoes.c:219"]
+    ProcessaDados -> selecao_do_modo
+    ProcessaDados -> RESET
+    selecao_do_modo [label="void selecao_do_modo ()
+funcoes.c:264"]
+    selecao_do_modo -> EPWM1_LoadDutyValue
+    EPWM1_LoadDutyValue [label="EPWM1_LoadDutyValue()"]
+    RESET [label="RESET()"]
+    TMR0_SetInterruptHandler [label="TMR0_SetInterruptHandler()"]
+    inicia_ultrasom [label="void inicia_ultrasom ()
+funcoes.c:25"]
+    inicia_ultrasom -> EnviaTx
+    inicia_ultrasom -> Trigger_SetHigh
+    inicia_ultrasom -> TMR1_WriteTimer
+    inicia_ultrasom -> Trigger_SetLow
+    EnviaTx [label="void EnviaTx ()
+funcoes.c:309"]
+    EnviaTx -> EUSART_Write
+    EUSART_Write [label="EUSART_Write()"]
+    Trigger_SetHigh [label="Trigger_SetHigh()"]
+    TMR1_WriteTimer [label="TMR1_WriteTimer()"]
+    Trigger_SetLow [label="Trigger_SetLow()"]
+    TMR1_SetGateInterruptHandler [label="TMR1_SetGateInterruptHandler()"]
+    posicao_bola_tubo [label="void posicao_bola_tubo ()
+funcoes.c:69"]
+    posicao_bola_tubo -> media
+    posicao_bola_tubo -> TMR1_ReadTimer
+    posicao_bola_tubo -> velocidade_som
+    posicao_bola_tubo -> Comando_PIeD
+    posicao_bola_tubo -> EPWM1_LoadDutyValue
+    posicao_bola_tubo -> ADC_GetConversion
+    posicao_bola_tubo -> TMR1_WriteTimer
+    media [label="void media (uint16_t timer)
+funcoes.c:57"]
+    TMR1_ReadTimer [label="TMR1_ReadTimer()"]
+    velocidade_som [label="uint16_t velocidade_som ()
+funcoes.c:42"]
+    velocidade_som -> ADC_GetConversion
+    ADC_GetConversion [label="ADC_GetConversion()"]
+    Comando_PIeD [label="void Comando_PIeD ()
+funcoes.c:375"]
+    Comando_PIeD -> modo_ventoinha
+    Comando_PIeD -> modo_valvula
+    modo_ventoinha [label="void modo_ventoinha ()
+funcoes.c:393"]
+    modo_ventoinha -> map_value
+    modo_ventoinha -> EPWM1_LoadDutyValue
+    map_value [label="int24_t map_value (int32_t x, int32_t in_min, int32_t in_max, int32_t out_min, int32_t out_max)
+funcoes.c:439"]
+    modo_valvula [label="void modo_valvula ()
+funcoes.c:415"]
+    modo_valvula -> map_value
+    TMR6_SetInterruptHandler [label="TMR6_SetInterruptHandler()"]
+    DRMotordePassos [label="void DRMotordePassos ()
+funcoes.c:91"]
+    DRMotordePassos -> funcao_diminui_num_passos
+    DRMotordePassos -> funcao_aumento_num_passos
+    funcao_diminui_num_passos [label="void funcao_diminui_num_passos ()
+funcoes.c:114"]
+    funcao_diminui_num_passos -> Passo1
+    funcao_diminui_num_passos -> Passo2
+    funcao_diminui_num_passos -> Passo3
+    funcao_diminui_num_passos -> Passo4
+    Passo1 [label="void Passo1 ()
+funcoes.c:157"]
+    Passo1 -> SM1_SetHigh
+    Passo1 -> SM2_SetLow
+    Passo1 -> SM3_SetLow
+    Passo1 -> SM4_SetHigh
+    SM1_SetHigh [label="SM1_SetHigh()"]
+    SM2_SetLow [label="SM2_SetLow()"]
+    SM3_SetLow [label="SM3_SetLow()"]
+    SM4_SetHigh [label="SM4_SetHigh()"]
+    Passo2 [label="void Passo2 ()
+funcoes.c:168"]
+    Passo2 -> SM1_SetHigh
+    Passo2 -> SM2_SetHigh
+    Passo2 -> SM3_SetLow
+    Passo2 -> SM4_SetLow
+    SM2_SetHigh [label="SM2_SetHigh()"]
+    SM4_SetLow [label="SM4_SetLow()"]
+    Passo3 [label="void Passo3 ()
+funcoes.c:179"]
+    Passo3 -> SM1_SetLow
+    Passo3 -> SM2_SetHigh
+    Passo3 -> SM3_SetHigh
+    Passo3 -> SM4_SetLow
+    SM1_SetLow [label="SM1_SetLow()"]
+    SM3_SetHigh [label="SM3_SetHigh()"]
+    Passo4 [label="void Passo4 ()
+funcoes.c:190"]
+    Passo4 -> SM1_SetLow
+    Passo4 -> SM2_SetLow
+    Passo4 -> SM3_SetHigh
+    Passo4 -> SM4_SetHigh
+    funcao_aumento_num_passos [label="void funcao_aumento_num_passos ()
+funcoes.c:134"]
+    funcao_aumento_num_passos -> Passo1
+    funcao_aumento_num_passos -> Passo2
+    funcao_aumento_num_passos -> Passo3
+    funcao_aumento_num_passos -> Passo4
+    CMP1_GetOutputStatus [label="CMP1_GetOutputStatus()"]
+    EUSART_is_rx_ready [label="EUSART_is_rx_ready()"]
+    Dados_recebidos [label="void Dados_recebidos ()
+funcoes.c:201"]
+    Dados_recebidos -> EUSART_Read
+    Dados_recebidos -> TMR4_WriteTimer
+    EUSART_Read [label="EUSART_Read()"]
+    TMR4_WriteTimer [label="TMR4_WriteTimer()"]
+}
